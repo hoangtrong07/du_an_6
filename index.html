@@ -1,246 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Design Event is coming up!</title>
-    <!-- Favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="./assets/favicon/apple-icon-57x57.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="./assets/favicon/apple-icon-60x60.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="./assets/favicon/apple-icon-72x72.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="./assets/favicon/apple-icon-76x76.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="./assets/favicon/apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="./assets/favicon/apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="./assets/favicon/apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="./assets/favicon/apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./assets/favicon/apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="./assets/favicon/android-icon-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="96x96"
-      href="./assets/favicon/favicon-96x96.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./assets/favicon/favicon-16x16.png"
-    />
-    <link rel="manifest" href=".assets/favicon/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta
-      name="msapplication-TileImage"
-      content=".assets/favicon/ms-icon-144x144.png"
-    />
-    <meta name="theme-color" content="#ffffff" />
+    <title>Đồng hồ chạy</title>
+    <style>
+      .clock {
+        width: 200px;
+        height: 200px;
+        border: 2px solid #000;
+        border-radius: 50%;
+        position: relative;
+        margin: 50px auto;
+      }
 
-    <!-- Reset css -->
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-    <!-- Embed font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Manrope:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Grid css -->
-    <link rel="stylesheet" href="./assets/css/grid-system.css" />
-    <!-- styles css -->
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+      .hour-hand,
+      .minute-hand,
+      .second-hand {
+        background: #000;
+        position: absolute;
+        left: 50%;
+        transform-origin: bottom center;
+      }
+
+      .hour-hand {
+        width: 6px;
+        height: 60px;
+        margin-left: -3px;
+        background-color: #000;
+      }
+
+      .minute-hand {
+        width: 4px;
+        height: 80px;
+        margin-left: -2px;
+        background-color: #000;
+      }
+
+      .second-hand {
+        width: 2px;
+        height: 90px;
+        margin-left: -1px;
+        background-color: #ff0000;
+      }
+    </style>
   </head>
   <body>
-    <!-- Header -->
-    <div class="container">
-      <header class="header">
-        <div class="header__inner">
-          <!-- Logo -->
-          <a href="#">
-            <img src="./assets/img/Logo.svg" alt="" class="logo" />
-          </a>
-
-          <!-- Navbar -->
-          <nav class="navbar">
-            <ul class="navbar__list">
-              <li class="navbar__item">
-                <a href="#!" class="navbar__link navbar__link--active">Home</a>
-              </li>
-              <li class="navbar__item">
-                <a href="#!" class="navbar__link">About</a>
-              </li>
-              <li class="navbar__item">
-                <a href="#!" class="navbar__link">Schedule</a>
-              </li>
-              <li class="navbar__item">
-                <a href="#!" class="navbar__link">Team</a>
-              </li>
-              <li class="navbar__item">
-                <a href="#!" class="navbar__link">Contacts</a>
-              </li>
-            </ul>
-          </nav>
-          <!-- Action -->
-          <a href="#!" class="btn header-action__btn">REGISTER NOW</a>
-        </div>
-      </header>
+    <div class="clock">
+      <div class="hour-hand"></div>
+      <div class="minute-hand"></div>
+      <div class="second-hand"></div>
     </div>
 
-    <div class="container">
-      <section class="hero">
-        <p class="hero-desc">OCTOBER 18-22, 2021 / REMOTE DESIGN WEEK</p>
-        <h1 class="hero__heading">Our Design Event is coming up!</h1>
-        <div class="hero__wrap-btn">
-          <a href="#!" class="btn hero-btn hero-btn__action">BOOK A SEAT</a>
-          <a href="#!" class="btn hero-more hero-btn__action">LEARN MORE</a>
-        </div>
-        <!-- Hero -->
-        <div class="row">
-          <div class="col-12 col-xl-4 col-sm-6">
-            <article class="hero-card">
-              <figure class="hero__img-wrap hero__img-wrap-1">
-                <img src="./assets/img/hero01.png" alt="" class="hero__img" />
-                <p class="hero__name">
-                  Anderson <br />
-                  Adam
-                </p>
-                <p class="hero__job">App Designer</p>
-              </figure>
-            </article>
-          </div>
-          <div class="col-12 col-xl-4 col-sm-6">
-            <article class="hero-card">
-              <figure class="hero__img-wrap hero__img-wrap-2">
-                <img src="./assets/img/hero02.png" alt="" class="hero__img" />
-                <p class="hero__name">
-                  Edwards <br />
-                  Reyes
-                </p>
-                <p class="hero__job">Web Designer</p>
-              </figure>
-            </article>
-          </div>
-          <div class="col-12 col-xl-4 col-sm-6">
-            <article class="hero-card">
-              <figure class="hero__img-wrap hero__img-wrap-3">
-                <img src="./assets/img/hero03.png" alt="" class="hero__img" />
-                <p class="hero__name">
-                  Rogers <br />
-                  Parker
-                </p>
-                <p class="hero__job">Product Designer</p>
-              </figure>
-            </article>
-          </div>
-        </div>
-      </section>
-    </div>
-    <div class="container">
-      <!-- Event -->
-      <div class="row">
-        <div class="col-xl-5">
-          <!-- Event left -->
-          <section class="event-left">
-            <h2 class="section-heading event-heading">
-              Events You'll Remember
-            </h2>
-            <p class="event__title">
-              We are a turnkey event agency in New York.
-            </p>
-            <p class="event__desc">
-              EventiX is a leading event management company in the United
-              States. We hold the highest quality events pushing the boundaries
-              of the industry standards.
-            </p>
-            <p class="event__desc">
-              We are passionate about creating integrated experiences that bring
-              cohesive connection between brands and targeted audience. Our team
-              of experienced and talented event managers strive to deliver
-              stellar results.
-            </p>
-          </section>
-        </div>
-        <div class="col-xl-6 offset-xl-1">
-          <div class="event-right">
-            <figure class="event__img-wrap">
-              <img src="./assets/img/event.png" alt="" class="event__img" />
-            </figure>
-            <div class="event-right__time"></div>
-          </div>
-        </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sit
-          distinctio consectetur, suscipit laborum odio earum architecto omnis
-          asperiores eius ut blanditiis aspernatur. Quae natus minima quasi
-          reprehenderit, aspernatur porro beatae perspiciatis eaque delectus
-          dolorum totam velit labore alias voluptates voluptate voluptatum a
-          iste rem saepe iure excepturi, inventore quia quibusdam! Culpa harum
-          rem ipsam repudiandae beatae dolores, eos expedita fuga recusandae.
-          Libero sapiente, itaque, aliquam, voluptatem blanditiis ducimus
-          excepturi obcaecati eum aliquid animi quibusdam atque mollitia nihil
-          provident a nam! Doloribus laudantium laboriosam itaque voluptatum,
-          numquam, magnam beatae aperiam temporibus eaque porro ab qui delectus
-          incidunt assumenda necessitatibus eligendi repellendus facere mollitia
-          repudiandae eos nihil doloremque perferendis ea. Consequuntur
-          aspernatur ea nobis hic neque nisi temporibus minima illo maiores
-          voluptatum doloribus esse quos quibusdam itaque a, at reprehenderit
-          quas vel necessitatibus quo qui unde cumque numquam! Voluptates
-          pariatur deleniti vero accusantium incidunt voluptas est dignissimos.
-          Quo qui cumque adipisci vel sunt officia ducimus excepturi, aut,
-          numquam molestias, aspernatur voluptatum voluptate tempore ullam iure.
-          Voluptate consequatur commodi dolore nam adipisci natus veniam culpa
-          vero assumenda. Harum inventore nostrum asperiores architecto, quod
-          fuga temporibus odit modi ratione rem error porro non, fugit
-          repellendus. Praesentium ipsum nulla, dolorum facere deserunt aut
-          placeat.
-        </p>
-      </div>
-    </div>
+    <script>
+      function rotateClockHands() {
+        const now = new Date();
+        const seconds = now.getSeconds();
+        const minutes = now.getMinutes();
+        const hours = now.getHours();
+
+        const secondHand = document.querySelector(".second-hand");
+        const minuteHand = document.querySelector(".minute-hand");
+        const hourHand = document.querySelector(".hour-hand");
+
+        const secondHandDegrees = (seconds / 60) * 360;
+        const minuteHandDegrees = ((minutes * 60 + seconds) / 3600) * 360;
+        const hourHandDegrees =
+          ((hours * 3600 + minutes * 60 + seconds) / 43200) * 360;
+
+        secondHand.style.transform = `rotate(${secondHandDegrees}deg)`;
+        minuteHand.style.transform = `rotate(${minuteHandDegrees}deg)`;
+        hourHand.style.transform = `rotate(${hourHandDegrees}deg)`;
+      }
+
+      setInterval(rotateClockHands, 1000);
+    </script>
   </body>
 </html>
